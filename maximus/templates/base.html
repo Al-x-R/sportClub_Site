@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static  %}
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title> Maximus {% block title %}
+    {% endblock  %}</title>
+    <!-- Required CSS files -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/barfiller.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <!-- Top Bar -->
+    {% include 'partials/_topbar.html' %}
+    <!-- Navbar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main content -->
+    {% block content %} {% endblock %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+
+    <!--Required JS files-->
+    <script src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/vendor/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.barfiller.js' %}"></script>
+    <script src="{% static 'js/vendor/loopcounter.js' %}"></script>
+    <script src="{% static 'js/vendor/slicknav.min.js' %}"></script>
+    <script src="{% static 'js/active.js' %}"></script>
+</body>
+</html>
