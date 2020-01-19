@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+<!--{% load humanize %}-->
+
+{% block title %} | Welcome {% endblock  %}
+
+{% block content %}
+
+        <!--   Fixed block   -->
+        <div class="fixed-wrap">
+            <div id="fixed">
+                <div class="text-mask">
+                    <br>
+                    <p style="font-size:60px">Maximus</p>
+                    <hr class="hr-light">
+                    <p style="font-size:45px">Gym, Fitness and Martial Arts</p>
+                </div>
+            </div>
+        </div>
+        <!--   Fixed block   -->
+
+        <!--    Sections   -->
+        <div class="testimonial-area sp bg1">
+            <div class="container">
+                <div class="section-title white">
+                    <h2>Our services</h2>
+                    <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
+                </div>
+                <div class="testimonial-slider">
+                    {% for section in sections %}
+                    <div class="single-slide">
+                        <div class="inner ">
+                            <!-- Card image -->
+                            <div class="view view-cascade">
+                                <img class="card-img-top" src="{{ section.photo_main.url }}" alt="Card image cap">
+                                <a>
+                                    <div class="mask img-gradient"></div>
+                                </a>
+                            </div>
+                            <p>When I was just starting 6th grade I got my first job. Paperboy! Boy, was I excited. At
+                                that time I had spent a lot of time actually playing the video official.</p>
+                            <div class="client-info">
+                                <div class="client-data">
+                                    <h4>{{ section.title }}</h4>
+                                    <h4>{{ section.trainer }}</h4>
+                                    <br>
+                                    <!-- Button -->
+                                    <a class="btn btn-dark">Button</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+        <!--     Sections    -->
+
+        <!--Section: call to action-->
+        <div class="bg-light">
+            <div class="container">
+                <div class="text-center pt-5 pb-5">
+                    <h2 style="font-size: 40px">In any incomprehensible situation, go to training</h2>
+                </div>
+            </div>
+        </div>
+        <!--Section: call to action-->
+
+        <!--    Trainers    -->
+        <section id="team" class="py-5">
+            <div class="container">
+                <h2 class="text-center">Our team</h2>
+                <div class="row text-center pt-5">
+                    <div class="testimonial-slider">
+                        {% for trainer in trainers %}
+                        <div class="single-slide">
+                            <div class="inner">
+                                <img src="{{ trainer.photo.url }}" alt="" class="rounded-circle mb-3">
+                                <h4>{{ trainer.name }}</h4>
+                                <p class="text-success">
+                                    <i class="fas fa-award text-success mb-3"></i>Trainer</p>
+                                <hr>
+                                <p>
+                                    <i class="text-center"></i> {{ trainer.description }}</p>
+                                <p>
+                                    <i class="text-center"></i>{{ trainer.email }}</p>
+                                <a class="btn btn-dark">Button</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--    Trainers    -->
+
+
+
+{% endblock %}
