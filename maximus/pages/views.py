@@ -7,7 +7,7 @@ from trainers.models import Trainer
 def index(request):
     #return HttpResponse('<h1>Hello</h1>')
     sections = Section.objects.order_by('title').filter(is_published=True)
-    trainers = Trainer.objects.order_by('name')
+    trainers = Trainer.objects.order_by('first_name')
     context = {
         'sections': sections,
         'trainers': trainers,
