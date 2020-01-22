@@ -4,7 +4,7 @@ from .models import Trainer
 
 # Create your views here.
 def index(request):
-    trainers = Trainer.objects.order_by('name')
+    trainers = Trainer.objects.order_by('first_name')
 
     paginator = Paginator(trainers, 6)
     page = request.GET.get('page')
