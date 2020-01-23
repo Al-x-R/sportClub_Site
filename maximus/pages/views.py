@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from sections.models import Section
 from trainers.models import Trainer
 
-# Create your views here.
+
 def index(request):
     sections = Section.objects.order_by('title').filter(is_published=True)
     trainers = Trainer.objects.order_by('first_name')
