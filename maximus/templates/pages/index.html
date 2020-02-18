@@ -45,7 +45,7 @@
                                     <h4>{{ section.trainer }}</h4>
                                     <br>
                                     <!-- Button -->
-                                    <a class="btn btn-dark">Button</a>
+                                    <a href="{% url 'section' section.id %}" class="btn btn-dark">Button</a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                     <i class="text-center"></i> {{ trainer.description }}</p>
                                 <p>
                                     <i class="text-center"></i>{{ trainer.email }}</p>
-                                <a class="btn btn-dark">Button</a>
+                                <a href="{% url 'trainer' trainer.id %}" class="btn btn-dark">Button</a>
                             </div>
                         </div>
                         {% endfor %}
