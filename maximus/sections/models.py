@@ -3,7 +3,7 @@ from trainers.models import Trainer
 
 # Create your models here.
 class Section(models.Model):
-    trainer = models.ForeignKey(Trainer, on_delete=models.DO_NOTHING, blank=True)
+    trainer = models.ForeignKey(Trainer, on_delete=models.DO_NOTHING, blank=True, null=True)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     number_of_lessons = models.IntegerField()

@@ -18,16 +18,16 @@
             <div class="single-portfolio col-md-4 branding photography design">
                 <div class="inner">
                     <div class="portfolio-img">
-                        <img src="{{ section.photo_main_trainings.url }}" alt="portfolio-image">
+                        <a href="{% url 'section' section.id %}">
+                        <img src="{{ section.photo_main_trainings.url }}" alt="portfolio-image"></a>
                         <div class="hover-content">
                             <div>
-                                <a href="#" class="button">{{ section.title }}</a>
+                                <a href="{% url 'section' section.id %}" class="button">{{ section.title }}</a>
                             </div>
                         </div>
                     </div>
                     <div class="portfolio-content">
-                        <a href="#"><h3>{{ section.title }}</h3></a>
-                    <!--  <a href="{% url 'section' section.id %}"><h3>{{ section.title }}</h3></a>  -->
+                     <a href="{% url 'section' section.id %}"><h3>{{ section.title }}</h3></a>
                     </div>
                 </div>
             </div>
