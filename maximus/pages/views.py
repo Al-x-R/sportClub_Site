@@ -14,5 +14,5 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 
-def about(request):
-    pass
+# def about(request):
+#     return render(request, 'pages/about.html', context)
