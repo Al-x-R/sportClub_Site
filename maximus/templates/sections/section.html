@@ -1,25 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="text-center pt-5">{{ section.title }}</h1>
-    <div class="about-area sp">
-        
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="about-content">
-                        <h3>USA’s most trusted 3D and graphic designing studio, a very passionate team inside.</h3>
-                        <p><b>{{ section.description }}</b> </p>
-                        <a href="{% url 'sections'%}" class="button"> <<< back</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-img">
-                        <img src="{{ section.photo_main_trainings.url }}" alt="">
-                    </div>
+<h1 class="text-center pt-5">{{ section.title }}</h1>
+<div class="about-area sp">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-content">
+                    <h3>USA’s most trusted 3D and graphic designing studio, a very passionate team inside.</h3>
+                    <p><b>{{ section.description }}</b> </p>
+                    <a href="{% url 'sections'%}" class="button">
+                        <<< back</a> </div> </div> <div class="col-md-6">
+                            <div class="about-img">
+                                <img src="{{ section.photo_main_trainings.url }}" alt="">
+                            </div>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
+    {% endblock %}
